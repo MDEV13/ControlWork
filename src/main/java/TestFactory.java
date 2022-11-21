@@ -1,93 +1,54 @@
-import Factories.BuharestToyFactory;
-import Factories.LondonToyFactory;
-import Factories.MichiganToyFactory;
-import Factories.RigaToyFactory;
+import Factories.AustriaToyFactory;
+import Factories.GermanyToyFactory;
+import Factories.MexicoToyFactory;
+import Factories.USAToyFactory;
 
 public class TestFactory {
     public static void main(String[] args) {
-        BuharestToyFactory factory = new BuharestToyFactory();
+        AustriaToyFactory ATF = new AustriaToyFactory();
 
-        for (int i = 0; i < 3; i++) {
-            factory.tie("Lisa");
-        }
-
-        for (int i = 0; i < 5; i++) {
-            factory.tie("Teddy");
+        for (int i = 0; i < 1; i++) {
+            ATF.tie("Teddy");
         }
 
         for (int i = 0; i < 2; i++) {
-            factory.tie("Billy");
+            ATF.tie("Billy");
         }
 
-        System.out.println("Lisa: "+factory.getToyProd("Lisa"));
-        System.out.println("Billy: "+factory.getToyProd("Billy"));
-        System.out.println("Susan: "+factory.getToyProd("Susan"));
-        System.out.println("Teddy: "+factory.getToyProd("Teddy"));
-
-        System.out.println("-".repeat(20));
-       RigaToyFactory factory1 = new RigaToyFactory();
-
-        for (int i = 0; i < 1; i++) {
-            factory1.tie("Lisa");
-        }
-
-        for (int i = 0; i < 3; i++) {
-            factory1.tie("Teddy");
-        }
+        GermanyToyFactory GTF = new GermanyToyFactory();
 
         for (int i = 0; i < 5; i++) {
-            factory1.tie("Billy");
+            GTF.tie("Teddy");
         }
-
-        for (int i = 0; i < 2; i++) {
-            factory1.tie("Susan");
-        }
-
-        System.out.println("Lisa: "+factory1.getToyProd("Lisa"));
-        System.out.println("Billy: "+factory1.getToyProd("Billy"));
-        System.out.println("Susan: "+factory1.getToyProd("Susan"));
-        System.out.println("Teddy: "+factory1.getToyProd("Teddy"));
-
-        System.out.println("-".repeat(20));
-
-        MichiganToyFactory factory2 = new MichiganToyFactory();
 
         for (int i = 0; i < 1; i++) {
-            factory2.tie("Lisa");
+            GTF.tie("Billy");
         }
 
-        for (int i = 0; i < 3; i++) {
-            factory2.tie("Billy");
-        }
+        MexicoToyFactory MTF = new MexicoToyFactory();
 
         for (int i = 0; i < 4; i++) {
-            factory2.tie("Susan");
+            MTF.tie("Teddy");
         }
 
-        System.out.println("Lisa: "+factory2.getToyProd("Lisa"));
-        System.out.println("Billy: "+factory2.getToyProd("Billy"));
-        System.out.println("Susan: "+factory2.getToyProd("Susan"));
-        System.out.println("Teddy: "+factory2.getToyProd("Teddy"));
+        for (int i = 0; i < 3; i++) {
+            MTF.tie("Billy");
+        }
 
-        System.out.println("-".repeat(20));
+        USAToyFactory UTF = new USAToyFactory();
 
-        LondonToyFactory factory3 = new LondonToyFactory();
-
-        for (int i = 0; i < 1; i++) {
-            factory3.tie("Lisa");
+        for (int i = 0; i < 3; i++) {
+            UTF.tie("Teddy");
         }
 
         for (int i = 0; i < 2; i++) {
-            factory3.tie("Billy");
+            UTF.tie("Billy");
         }
+        System.out.println("-".repeat(40));
+        System.out.println("Austria: \n\tBilly - "+ ATF.getToyProd("Billy")+"\n\tTeddy - "+ ATF.getToyProd("Teddy"));
+        System.out.println("Germany: \n\tBilly - "+ GTF.getToyProd("Billy")+"\n\tTeddy - "+ GTF.getToyProd("Teddy"));
+        System.out.println("Mexico: \n\tBilly - "+ MTF.getToyProd("Billy")+"\n\tTeddy - "+ MTF.getToyProd("Teddy"));
+        System.out.println("USA: \n\tBilly - "+ UTF.getToyProd("Billy")+"\n\tTeddy - "+ UTF.getToyProd("Teddy"));
 
-        for (int i = 0; i < 1; i++) {
-            factory3.tie("Susan");
-        }
-
-        System.out.println("Lisa: "+factory3.getToyProd("Lisa"));
-        System.out.println("Billy: "+factory3.getToyProd("Billy"));
-        System.out.println("Susan: "+factory3.getToyProd("Susan"));
-        System.out.println("Teddy: "+factory3.getToyProd("Teddy"));
     }
 }
