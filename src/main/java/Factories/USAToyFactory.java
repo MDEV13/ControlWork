@@ -14,13 +14,13 @@ public class USAToyFactory extends ToyFactory{
     @Override
     protected Toy factoryMethod(String kindOfToy) {
 
-        if(kindOfToy.equals("Billy")) {
+        if(kindOfToy.equalsIgnoreCase("bear")) {
             countProcess(kindOfToy);
-            return new USABillyBearToy("Blue","White");
+            return new USABearToy("Blue","White");
         }
-        else if(kindOfToy.equals("Teddy")) {
+        else if(kindOfToy.equalsIgnoreCase("train")) {
             countProcess(kindOfToy);
-            return new USATeddyBearToy("Green","White");
+            return new USATrainToy("Brown",false);
         }
 
         return null;

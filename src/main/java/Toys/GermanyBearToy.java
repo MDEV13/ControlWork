@@ -1,11 +1,11 @@
 package Toys;
 
-public class GermanyBillyBearToy extends BearToy {
+public class GermanyBearToy extends BearToy {
 
     private String costume = "Yellow";
     private String glass = "Green";
 
-    public GermanyBillyBearToy(String colorOfEyes, String colorOfFluff) {
+    public GermanyBearToy(String colorOfEyes, String colorOfFluff) {
         super(colorOfEyes, colorOfFluff);
     }
 
