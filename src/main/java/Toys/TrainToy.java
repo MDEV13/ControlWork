@@ -10,19 +10,19 @@ public class TrainToy implements Toy{
         this.stream = stream;
     }
 
-    public Boolean getStream() {
+    protected Boolean getStream() {
         return stream;
     }
 
-    public void setStream(Boolean stream) {
+    protected void setStream(Boolean stream) {
         this.stream = stream;
     }
 
-    public String getColor() {
+    protected String getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    protected void setColor(String color) {
         this.color = color;
     }
 
